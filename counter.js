@@ -26,6 +26,31 @@ const initialState = {
   type: "INCREMENT_BY_AMOUNT";
 }
 
+// ACTION CREATOR
+const incrementAction = () => {
+  return {
+    type: "INCREMENT",
+  };
+};
+
+const decrementAction = () => {
+  return {
+    type: "DECREMENT",
+  };
+};
+
+const resetAction = () => {
+  return {
+    type: "RESET",
+  };
+};
+
+const incAmountAction = () => {
+  return {
+    type: "INCREMENT_BY_AMOUNT",
+  };
+};
+
 // REDUCERS:
 
 // STORES:
