@@ -46,9 +46,10 @@ const resetAction = () => {
   };
 };
 
-const incAmountAction = () => {
+const incAmountAction = (value) => {
   return {
     type: "INCREMENT_BY_AMOUNT",
+    payload: value,
   };
 };
 
@@ -71,6 +72,10 @@ const counterReducer = (state = initialState, action) => {
   } else if (action.type === "RESET") {
     return {
       count: (state.count = 0),
+    };
+  } else if (action.type === "INCREMENT_BY_AMOUNT") {
+    return {
+      count: state.count + action.payload,
     };
   }
 };
@@ -107,3 +112,7 @@ store.dispatch(decrementAction());
 // RESET
 store.dispatch(resetAction());
 // CONSOLE LOG: { count: 0 }
+
+// INCREASE BY AMOUNT
+store.dispatch(incAmountAction(10));
+// CONSOLE LOG: { count: 10 }
