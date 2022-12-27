@@ -64,6 +64,10 @@ const counterReducer = (state = initialState, action) => {
     return {
       count: state.count + 1,
     };
+  } else if (action.type === "DECREMENT") {
+    return {
+      count: state.count - 1,
+    };
   }
 };
 
@@ -76,8 +80,6 @@ MUDA O ESTADO DO DADO NO DISPATCH DA ACTION */
 
 const store = createStore(counterReducer);
 
-
-
 // STORE / SUBSCRIBE
 
 store.subscribe(() => {
@@ -88,4 +90,10 @@ store.subscribe(() => {
 
 // STORE / DISPATCH
 
+// INCREMENT
 store.dispatch(incrementAction());
+// CONSOLE LOG: { count: 1 }
+
+// DECREMENT
+store.dispatch(decrementAction());
+// CONSOLE LOG: { count: 0 }
