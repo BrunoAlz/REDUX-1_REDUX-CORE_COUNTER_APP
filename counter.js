@@ -58,6 +58,12 @@ DOS DADOS BASEADO NA ACTION E RETORNA O NOVO ESTADO  */
 // 2- O NOVO VALOR DO ESTADO DEVE SER CALCULADO BASEADO NO ESTADO E NA ACTION
 // 3- OS REDUCERS NÃO PODEM MUDAR O ESTADO EXISTENTE
 
-const counterReducer = (state, action) => {};
+const counterReducer = (state = initialState, action) => {
+  if (action.type === "INCREMENT") {
+    return {
+      count: state.count + 1,
+    };
+  }
+};
 
 // STORES:
