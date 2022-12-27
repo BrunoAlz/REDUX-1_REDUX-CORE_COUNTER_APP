@@ -97,7 +97,7 @@ store.subscribe(() => {
   console.log(stateData);
 });
 
-// STORE / DISPATCH
+// STORE / DISPATCH 
 
 // INCREMENT
 store.dispatch(incrementAction());
