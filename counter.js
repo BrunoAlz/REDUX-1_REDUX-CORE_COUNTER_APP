@@ -1,3 +1,4 @@
+const { createStore } = require("redux");
 // PASSOS:
 
 // INITIAL STATE:
@@ -67,3 +68,14 @@ const counterReducer = (state = initialState, action) => {
 };
 
 // STORES:
+
+/* GUARDA OS DADOS
+NÃO TEM LÓGICA DE NEGOCIO
+RECEBE AS ACTIONS E PASSA PARA O MIDDLEWARE
+MUDA O ESTADO DO DADO NO DISPATCH DA ACTION */
+
+const store = createStore(counterReducer);
+
+// STORE / GET STATE
+
+const stateData = store.getState()
