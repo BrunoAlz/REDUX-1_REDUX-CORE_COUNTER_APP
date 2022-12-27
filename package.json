@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/BrunoAlz/REDUX-1_REDUX-CORE_COUNTER_APP/issues"
   },
-  "homepage": "https://github.com/BrunoAlz/REDUX-1_REDUX-CORE_COUNTER_APP#readme"
+  "homepage": "https://github.com/BrunoAlz/REDUX-1_REDUX-CORE_COUNTER_APP#readme",
+  "dependencies": {
+    "redux": "^4.2.0"
+  }
 }
