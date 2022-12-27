@@ -76,6 +76,16 @@ MUDA O ESTADO DO DADO NO DISPATCH DA ACTION */
 
 const store = createStore(counterReducer);
 
-// STORE / GET STATE
 
-const stateData = store.getState()
+
+// STORE / SUBSCRIBE
+
+store.subscribe(() => {
+  // STORE / GET STATE
+  const stateData = store.getState();
+  console.log(stateData);
+});
+
+// STORE / DISPATCH
+
+store.dispatch(incrementAction());
