@@ -68,6 +68,10 @@ const counterReducer = (state = initialState, action) => {
     return {
       count: state.count - 1,
     };
+  } else if (action.type === "RESET") {
+    return {
+      count: (state.count = 0),
+    };
   }
 };
 
@@ -93,7 +97,13 @@ store.subscribe(() => {
 // INCREMENT
 store.dispatch(incrementAction());
 // CONSOLE LOG: { count: 1 }
+store.dispatch(incrementAction());
+// CONSOLE LOG: { count: 2 }
 
 // DECREMENT
 store.dispatch(decrementAction());
+// CONSOLE LOG: { count: 1 }
+
+// RESET
+store.dispatch(resetAction());
 // CONSOLE LOG: { count: 0 }
